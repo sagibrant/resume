@@ -107,7 +107,7 @@
 
 #### 🔹🤖🧠 UFT OCR改进 – *2024-2025*
 
-`UFT AI Addin`和`UFT TextObject`中大量使用了OCR引擎，但是UFT中使用的传统OCR引擎（如`ABBYY`和`Tesseract`）在许多客户的生产环境中准确率偏低，无法满足自动化所需的准确性。此外，大部分UFT客户受限于隐私政策或设备环境，大都无法使用基于云的OCR服务。
+`UFT AI Add-in`和`UFT TextObject`中大量使用了OCR引擎，但是UFT中使用的传统OCR引擎（如`ABBYY`和`Tesseract`）在许多客户的生产环境中准确率偏低，无法满足自动化所需的准确性。此外，大部分UFT客户受限于隐私政策或设备环境，大都无法使用基于云的OCR服务。
 
 为应对这些挑战，我们团队评估了五种可能的解决方案，包括切换成EasyOCR或者基于Tesseract重新训练等方案。其中，`混合文本识别`的方案在初始概念验证(PoC)阶段，因其性能缓慢(每次扫描约20秒)和缺乏单词分段而被否决。
 
@@ -117,17 +117,17 @@
 
 #### 🔹🌐🧠 UFT Cloud Browser 重构 – *2024*
 
-上一版本的`UFT Cloud Browser`通过`Digital Lab Connector`与`UFT Web Agent`直接进行WebSocket通信。该简化设计虽便于实现，但限制了对`UFT AI Addin`所需灵活性的支持，也难以满足客户日益复杂的业务需求。
+上一版本的`UFT Cloud Browser`通过`Digital Lab Connector`与`UFT Web Agent`直接进行WebSocket通信。该简化设计虽便于实现，但限制了对`UFT AI Add-in`所需灵活性的支持，也难以满足客户日益复杂的业务需求。
 
-最大的限制在于：`UFT AI Addin`高度依赖COM对象与Windows消息机制，而`Digital Lab`使用基于Java的跨平台架构，与之不兼容。同时，`Digital Lab`团队在Windows原生技术方面经验有限，这进一步增加了集成难度。为解决以上问题，我带领团队进行了`UFT Cloud Browser`的重构工作。
+最大的限制在于：`UFT AI Add-in`高度依赖COM对象与Windows消息机制，而`Digital Lab`使用基于Java的跨平台架构，与之不兼容。同时，`Digital Lab`团队在Windows原生技术方面经验有限，这进一步增加了集成难度。为解决以上问题，我带领团队进行了`UFT Cloud Browser`的重构工作。
 
 主要贡献包括：
 
 - **重新设计通信框架**：我们对原有通信协议进行了抽象，支持STD I/O、Windows消息和WebSocket三种协议，且保持与现有UFT通信格式一致，确保兼容性。
 - **重新实现自动化模拟模块**：基于开源产品，实现新的跨平台的鼠标和键盘模拟模块。
-- **重新实现自动化引擎模块**：接收来自UFT的自动化脚本消息后，将其拆解为具体逻辑，并根据任务类型分别交由`UFT Web Addin`或`UFT AI Addin`模块执行。
+- **重新实现自动化引擎模块**：接收来自UFT的自动化脚本消息后，将其拆解为具体逻辑，并根据任务类型分别交由`UFT Web Add-in`或`UFT AI Add-in`模块执行。
 
-最终，我们实现了一个稳定、高效、易扩展的新`UFT Cloud Browser`，不仅无缝兼容上一版本的全部功能，还良好支持`UFT AI Addin`模块，并具备拓展能力，可适配未来的其他平台与`UFT Addin`。
+最终，我们实现了一个稳定、高效、易扩展的新`UFT Cloud Browser`，不仅无缝兼容上一版本的全部功能，还良好支持`UFT AI Add-in`模块，并具备拓展能力，可适配未来的其他平台与`UFT Add-in`。
 
 #### 🔹☁️🧪 UFT Cloud Browser (Quick-Win) – *2023*
 
@@ -144,20 +144,20 @@
 
 #### 🔹🧩🧪 UFT MV3扩展迁移 – *2022–2023*
 
-随着 Chromium 宣布废弃`Manifest V2 (MV2)`，我主导并完成了`UFT Web Agent`向`Manifest V3 (MV3)`的迁移，确保`UFT Web Addin`能持续兼容`Chrome`与`Edge`浏览器。
+随着 Chromium 宣布废弃`Manifest V2 (MV2)`，我主导并完成了`UFT Web Agent`向`Manifest V3 (MV3)`的迁移，确保`UFT Web Add-in`能持续兼容`Chrome`与`Edge`浏览器。
 
 主要技术贡献包括：
 
 - **重新设计Extension内的消息架构**: 使用新的`Extension API`与`CustomEvent`替代了遗留的`window.postMessage`通信方式，从而降低了对被测试网页的影响，提升了安全性与可维护性。
-- **使用异步操作以减少阻塞**：修改了部分同步代码实现，尽可能减少了`UFT Web Addin`脚本执行对客户网页中JavaScript的干预，显著提升了`UFT Web Agent`的稳定性。
+- **使用异步操作以减少阻塞**：修改了部分同步代码实现，尽可能减少了`UFT Web Add-in`脚本执行对客户网页中JavaScript的干预，显著提升了`UFT Web Agent`的稳定性。
 - **重新设计自定义用户脚本执行管道**：绕过了 MV3 更严格的`Content Security Policy (CSP)`限制，从而使`UFT Web Agent`能够在`MAIN WORLD`下执行自定义JavaScript代码，同时也解决了在MV3下点击`href="javascript:"`的DOM元素，但是其JavaScript代码在`CONTENT`下被阻止执行的问题。
 - **完全向后兼容**：MV3 版本的`UFT Web Agent`被自动部署至超过**10万**个客户环境，升级后未出现任何重大功能故障，兼容性良好。
 
-这项工作确保了`UFT Web Addin`这一核心自动化能力在不断演化的 Web 测试与自动化生态中持续保持先进性与兼容性。
+这项工作确保了`UFT Web Add-in`这一核心自动化能力在不断演化的 Web 测试与自动化生态中持续保持先进性与兼容性。
 
 #### 🔹🧩⚡ UFT Web快速运行模式 – *2020–2021*
 
-随着现代浏览器的演变，`UFT Web Addin`的客户不断的从IE迁移向Chrome, Edge和Firefox。然而`UFT Web Addin`最初针对IE浏览器进行了优先优化，在其他浏览器上存在明显的性能下降。尤其在处理复杂网页时，`UFT Web Testing`的执行性能出现明显下降。主要原因在于：IE使用基于C++的插件实现，而其他主流浏览器则依赖基于JavaScript的浏览器扩展程序，同时在具体内存对象上，IE允许直接的对象访问，而在其他浏览器中，则需通过大量额外通信来获取具体的DOM信息。。
+随着现代浏览器的演变，`UFT Web Add-in`的客户不断的从IE迁移向Chrome, Edge和Firefox。然而`UFT Web Add-in`最初针对IE浏览器进行了优先优化，在其他浏览器上存在明显的性能下降。尤其在处理复杂网页时，`UFT Web Testing`的执行性能出现明显下降。主要原因在于：IE使用基于C++的插件实现，而其他主流浏览器则依赖基于JavaScript的浏览器扩展程序，同时在具体内存对象上，IE允许直接的对象访问，而在其他浏览器中，则需通过大量额外通信来获取具体的DOM信息。。
 
 这个性能问题受到越来越多的客户关注，某大型企业客户曾反馈一个严重问题：在从IE迁移至Firefox后，部分包含`Virtual Relation Identification (VRI)`的测试步骤，执行时间从原本的**3秒**骤增至超过**3分钟**，严重影响了客户日常工作。
 
@@ -165,12 +165,12 @@
 
 - 🔍 深入分析了超过**40万行**核心旧代码，追踪性能瓶颈，挖掘低效架构痛点。
 - 🧠 确定关键问题：过多的DOM属性查询消息、冗余的存在性检查，从而导致I/O开销居高不下。
-- 🛠️ 重新设计了`UFT Web Addin`的通信协议，引入测试脚本上下文，将`Query`， `Action`与`Report`等消息合并为一个新的通用的`AutomationStep`，形成原子化消息单元，基本保证每一个测试步骤，只进行一次I/O操作，相比每个测试步骤需发送10–60个零散消息的旧方案，新架构显著降低了通信负载，平均提速了近30多倍。
+- 🛠️ 重新设计了`UFT Web Add-in`的通信协议，引入测试脚本上下文，将`Query`， `Action`与`Report`等消息合并为一个新的通用的`AutomationStep`，形成原子化消息单元，基本保证每一个测试步骤，只进行一次I/O操作，相比每个测试步骤需发送10–60个零散消息的旧方案，新架构显著降低了通信负载，平均提速了近30多倍。
 - 🚀 在Chrome, Edge, Firefox上实现平均**3倍**的性能提升，在WebDriver方案中，测试执行性能提升近**5倍**（Baseline测试集运行时间从20分钟缩短至4分钟）。
 - 💡 在VRI重度使用的场景中，执行时间从**3分钟**改善到**5秒**。
-- 📘 除了技术成果，该项目也显著提升了团队整体技术水平能，使得团队对这部分历史超过15年的`UFT Web Addin`代码有了更深刻的理解。
+- 📘 除了技术成果，该项目也显著提升了团队整体技术水平能，使得团队对这部分历史超过15年的`UFT Web Add-in`代码有了更深刻的理解。
 
-这次深度重构不仅提升了性能，还增强了团队的凝聚力，加深了代码理解，为团队日后处理`UFT Web Addin`相关任务奠定了坚实基础。
+这次深度重构不仅提升了性能，还增强了团队的凝聚力，加深了代码理解，为团队日后处理`UFT Web Add-in`相关任务奠定了坚实基础。
 
 #### 🔹🧠🔤 UFT TextObject功能 – *2019*
 
@@ -203,7 +203,7 @@
 
 **成果与影响：**
 - 该概念验证获得高级经理认可，并改变了当前大版本的产品策略：产品经理重新调整了路线图，优先考虑`UFT Parallel Execution`的实现。
-- 带领团队，开发并发布了`UFT ParallelRunner`，支持了`UFT Mobile Parallel Execution`，后来将`UFT Parallel Execution`扩展到`UFT Web Addin`和`UFT Java Addin`。
+- 带领团队，开发并发布了`UFT ParallelRunner`，支持了`UFT Mobile Parallel Execution`，后来将`UFT Parallel Execution`扩展到`UFT Web Add-in`和`UFT Java Add-in`。
 - 使售前团队在后续交易中可以有更大概率竞争成功。
 - QA团队的测试周期显著缩短，自动化测试效率大幅提升。
 - 因该高影响力成果获公司认可，晋升为**Manager I**。
@@ -246,7 +246,7 @@
 
 在MC创始人Ameer来访上海期间，我与其深入探讨并协同解决了多个关键架构设计难题。
 
-基于该设计，我实现了连接两个`UFT Addin`的桥接服务，使单一的`TestObject`能够跨`UFT Addin`协同运行。该设计也为未来支持`Cross Browser Testing`提供了良好的架构基础。
+基于该设计，我实现了连接两个`UFT Add-in`的桥接服务，使单一的`TestObject`能够跨`UFT Add-in`协同运行。该设计也为未来支持`Cross Browser Testing`提供了良好的架构基础。
 
 #### 🔹📄🧾 UFT HTML Report Logger - *2015*
 
