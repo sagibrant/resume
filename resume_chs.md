@@ -64,7 +64,7 @@
 
 ## 🚀 职业概述
 
-资深软件工程师兼团队研发经理，拥有超过十年的UFT/QTP功能开发、系统现代化与性能优化经验。。擅长交付可扩展的复杂解决方案，处理关键CPE事件，主导核心功能的研发，推动自动化工具的创新，并积极促进全球分布式团队之间的高效协作。
+资深软件工程师兼团队研发经理，拥有超过十年的UFT/QTP功能开发、系统现代化与性能优化经验。擅长交付可扩展的复杂解决方案，处理关键CPE事件，主导核心功能的研发，推动自动化工具的创新，并积极促进全球分布式团队之间的高效协作。
 
 ### 💡 核心优势
 
@@ -87,14 +87,14 @@
 
 ## 🛠 项目经历
 
-### 🧠📦 Unified Functional Testing（UFT/QTP） - *2014.7-2025.6*
+### 🧠📦 Unified Functional Testing (UFT/QTP) - *2014.7-2025.6*
 
-作为**Unified Functional Testing（UFT/QTP）**的核心开发人员与团队经理，我带领团队持续交付新功能，积极响应客户反馈，并推动架构现代化与技术创新。
+作为**Unified Functional Testing (UFT/QTP)**的核心开发人员与团队经理，我带领团队持续交付新功能，积极响应客户反馈，并推动架构现代化与技术创新。
 
 **UFT**（原名**QTP**）是我所参与开发的旗舰级商业测试自动化平台：
 
 - 🏛️ **历史与演进：**  
-  最初起源于1998年的**Astra QuickTest（Mercury）**，在惠普和Micro Focus时期不断演化，发展为支持AI驱动的**UFT One**。现今，该产品更名为**OpenText Functional Testing**，具备AI识别能力和高度脚本自定义的自动化功能。
+  最初起源于1998年的**Astra QuickTest (Mercury)**，在惠普和Micro Focus时期不断演化，发展为支持AI驱动的**UFT One**。现今，该产品更名为**OpenText Functional Testing**，具备AI识别能力和高度脚本自定义的自动化功能。
 
 - 🧩 **代码规模：**  
   UFT拥有上亿行代码，涵盖C++、C#、Java、JavaScript与VBScript等多种语言，并与Windows和各种主流浏览器的自动化技术深度集成。
@@ -109,11 +109,11 @@
 
 `UFT AI Addin`和`UFT TextObject`中大量使用了OCR引擎，但是UFT中使用的传统OCR引擎（如`ABBYY`和`Tesseract`）在许多客户的生产环境中准确率偏低，无法满足自动化所需的准确性。此外，大部分UFT客户受限于隐私政策或设备环境，大都无法使用基于云的OCR服务。
 
-为应对这些挑战，我们团队评估了五种可能的解决方案，包括切换成EasyOCR或者基于Tesseract重新训练等方案。其中，`混合文本识别`的方案在初始概念验证（PoC）阶段，因其性能缓慢（每次扫描约20秒）和缺乏单词分段而被否决。
+为应对这些挑战，我们团队评估了五种可能的解决方案，包括切换成EasyOCR或者基于Tesseract重新训练等方案。其中，`混合文本识别`的方案在初始概念验证(PoC)阶段，因其性能缓慢(每次扫描约20秒)和缺乏单词分段而被否决。
 
 但是我敏锐的意识到该方案的前景，主动参与到了该方案的具体研发中，通过优化算法和查询逻辑，成功将处理时间从约**20秒**缩短到约**2秒**，并为其增加了分词分段功能。`混合文本识别`的PoC因而在后续的展示中，被一致选中为最终方案，并由我领导团队成功实施。
 
-`混合文本识别`解决方案智能融合了原始OCR结果以及基于DOM的Web文本信息。该方案面临的主要挑战包括：处理复杂的 CSS 样式、修正嵌套`iframe`内文本位置信息，以及尽可能降低对 UFT 测试脚本执行性能的影响。该`混合文本识别`方案在网页上可以实现近**100%**的准确性，显著提高了离线环境中的自动化可靠性，为大量UFT客户解决了实际问题。
+`混合文本识别`解决方案智能融合了原始OCR结果以及基于DOM的Web文本信息。该方案面临的主要挑战包括：处理复杂的CSS样式、修正嵌套`iframe`内文本位置信息，以及尽可能降低对UFT测试脚本执行性能的影响。该`混合文本识别`方案在网页上可以实现近**100%**的准确性，显著提高了离线环境中的自动化可靠性，为大量UFT客户解决了实际问题。
 
 #### 🔹🌐🧠 UFT Cloud Browser 重构 – *2024*
 
@@ -131,7 +131,7 @@
 
 #### 🔹☁️🧪 UFT Cloud Browser (Quick-Win) – *2023*
 
-在`StormRunner Functional（SRF）`项目终止后，市场对**基于云的浏览器自动化解决方案**的需求依然强烈。然而，由于预算和资源限制，上层经理们开始寻求一种开发开销最小的轻量级替代方案。
+在`StormRunner Functional (SRF)`项目终止后，市场对**基于云的浏览器自动化解决方案**的需求依然强烈。然而，由于预算和资源限制，上层经理们开始寻求一种开发开销最小的轻量级替代方案。
 
 作为技术负责人，我与`Digital Lab`团队合作，设计并交付了一个精简的`UFT Cloud Browser`替代方案，重用部分旧模块以降低开发成本并加快交付进度。
 
@@ -144,13 +144,13 @@
 
 #### 🔹🧩🧪 UFT MV3扩展迁移 – *2022–2023*
 
-随着 Chromium 宣布废弃`Manifest V2（MV2）`，我主导并完成了`UFT Web Agent`向`Manifest V3（MV3）`的迁移，确保`UFT Web Addin`能持续兼容`Chrome`与`Edge`浏览器。
+随着 Chromium 宣布废弃`Manifest V2 (MV2)`，我主导并完成了`UFT Web Agent`向`Manifest V3 (MV3)`的迁移，确保`UFT Web Addin`能持续兼容`Chrome`与`Edge`浏览器。
 
 主要技术贡献包括：
 
 - **重新设计Extension内的消息架构**: 使用新的`Extension API`与`CustomEvent`替代了遗留的`window.postMessage`通信方式，从而降低了对被测试网页的影响，提升了安全性与可维护性。
 - **使用异步操作以减少阻塞**：修改了部分同步代码实现，尽可能减少了`UFT Web Addin`脚本执行对客户网页中JavaScript的干预，显著提升了`UFT Web Agent`的稳定性。
-- **重新设计自定义用户脚本执行管道**：绕过了 MV3 更严格的`Content Security Policy(CSP)`限制，从而使`UFT Web Agent`能够在`MAIN WORLD`下执行自定义JavaScript代码，同时也解决了在MV3下点击`href="javascript:"`的DOM元素，但是其JavaScript代码在`CONTENT`下被阻止执行的问题。
+- **重新设计自定义用户脚本执行管道**：绕过了 MV3 更严格的`Content Security Policy (CSP)`限制，从而使`UFT Web Agent`能够在`MAIN WORLD`下执行自定义JavaScript代码，同时也解决了在MV3下点击`href="javascript:"`的DOM元素，但是其JavaScript代码在`CONTENT`下被阻止执行的问题。
 - **完全向后兼容**：MV3 版本的`UFT Web Agent`被自动部署至超过**10万**个客户环境，升级后未出现任何重大功能故障，兼容性良好。
 
 这项工作确保了`UFT Web Addin`这一核心自动化能力在不断演化的 Web 测试与自动化生态中持续保持先进性与兼容性。
@@ -203,14 +203,14 @@
 
 **成果与影响：**
 - 该概念验证获得高级经理认可，并改变了当前大版本的产品策略：产品经理重新调整了路线图，优先考虑`UFT Parallel Execution`的实现。
-- 带领团队，开发并发布了`UFT ParallelRunner`，支持了`UFT Mobile Parallel Execution`，后来将`UFT Parallel Execution`扩展到`UFT Web add-in`和`UFT Java add-in`。
+- 带领团队，开发并发布了`UFT ParallelRunner`，支持了`UFT Mobile Parallel Execution`，后来将`UFT Parallel Execution`扩展到`UFT Web Addin`和`UFT Java Addin`。
 - 使售前团队在后续交易中可以有更大概率竞争成功。
-- QA 团队的测试周期显著缩短，自动化测试效率大幅提升。
+- QA团队的测试周期显著缩短，自动化测试效率大幅提升。
 - 因该高影响力成果获公司认可，晋升为**Manager I**。
 
 #### 🔹☁️🧱 UFT Cloud Execution on SRF - *2016-2017*
 
-`StormRunner Functional（SRF）`是一个基于AWS的解决方案，用于在Web和移动应用程序上执行功能测试。该平台提供一个虚拟实验室，支持多种浏览器、操作系统与移动设备。团队可在无需管理底层基础设施的前提下，跨多个环境执行测试任务。
+`StormRunner Functional (SRF)`是一个基于AWS的解决方案，用于在Web和移动应用程序上执行功能测试。该平台提供一个虚拟实验室，支持多种浏览器、操作系统与移动设备。团队可在无需管理底层基础设施的前提下，跨多个环境执行测试任务。
 
 作为UFT后端团队的核心开发人员，我负责设计和实现`UFT Cloud Execution`解决方案：
 
@@ -232,13 +232,13 @@
   - 提升了平台可靠性和用户满意度  
 
 - **附加收入来源**  
-  - 通过在`Docker Hub`发布基于 Windows 容器的镜像，为公司带来了每年200–300万美元的意外新增收入来源。
+  - 通过在`Docker Hub`发布基于Windows容器的镜像，为公司带来了每年200–300万美元的意外新增收入来源。
 
 此次革新不仅彻底改进了`UFT Cloud Execution`能力，也为未来容器化自动化测试方案奠定了坚实基础。
 
 #### 🔹📱🔗 HP/HPE Mobile Cente集成 - *2016*
 
-`HP/HPE Mobile Cente（MC）`是一款由公司内部孵化的移动测试平台，使QA团队能够在真实的iOS、Android及Windows设备上执行自动化测试。
+`HP/HPE Mobile Cente (MC)`是一款由公司内部孵化的移动测试平台，使QA团队能够在真实的iOS、Android及Windows设备上执行自动化测试。
 
 我负责维护UFT与MC之间的集成并开发新功能以扩展我们在测试相关领域的功能。
 
@@ -250,7 +250,7 @@
 
 #### 🔹📄🧾 UFT HTML Report Logger - *2015*
 
-UFT使用基于`WinForms`的应用程序 —— `UFT Run Result Viewer（RRV）`来展示测试运行结果。RRV在加载与处理大量测试步骤时效率较低，且难以共享测试结果，因为接收方必须安装RRV客户端才能查看。而QA经理及其他相关人员通常未安装RRV，限制了测试结果的可访问性。
+UFT使用基于`WinForms`的应用程序 —— `UFT Run Result Viewer (RRV)`来展示测试运行结果。RRV在加载与处理大量测试步骤时效率较低，且难以共享测试结果，因为接收方必须安装RRV客户端才能查看。而QA经理及其他相关人员通常未安装RRV，限制了测试结果的可访问性。
 
 为解决此问题，FA和PM决定开发一个新的测试结果报告工具-`HTML Report`，目标是设计为一个可在任何浏览器中以单个`.html`文件打开的，轻量、可分享的报告文件。
 
@@ -260,7 +260,7 @@ UFT使用基于`WinForms`的应用程序 —— `UFT Run Result Viewer（RRV）`
 
 #### 🔹🖥️🔌 UFT Remote Agent - *2014*
 
-`UFT Remote Agent`是一个基于DCOM的组件，主要用于从`ALM（原Quality Center）`远程触发UFT测试执行。该组件最初使用C++编写，随着时间推移演变为一个包含9000多行代码的巨型类，结构单一，存在大量全局变量且注释缺失，维护难度极高。由于代码结构混乱，系统难以维护，频繁出现客户报告的执行错误。
+`UFT Remote Agent`是一个基于DCOM的组件，主要用于从`ALM/QC`远程触发UFT测试执行。该组件最初使用C++编写，随着时间推移演变为一个包含9000多行代码的巨型类，结构单一，存在大量全局变量且注释缺失，维护难度极高。由于代码结构混乱，系统难以维护，频繁出现客户报告的执行错误。
 
 为解决上述问题，架构师决定以C#重构该组件，而我则承担了该项目的具体实现任务。
 
