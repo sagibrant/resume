@@ -89,12 +89,12 @@
 
 ### 🧠📦 Unified Functional Testing (UFT/QTP) - *2014.7-2025.6*
 
-作为**Unified Functional Testing (UFT/QTP)**的核心开发人员与团队经理，我带领团队持续交付新功能，积极响应客户反馈，并推动架构现代化与技术创新。
+作为 **Unified Functional Testing (UFT/QTP)** 的核心开发人员与团队经理，我带领团队持续交付新功能，积极响应客户反馈，并推动架构现代化与技术创新。
 
 **UFT**（原名**QTP**）是我所参与开发的旗舰级商业测试自动化平台：
 
 - 🏛️ **历史与演进：**  
-  最初起源于1998年的**Astra QuickTest (Mercury)**，在惠普和Micro Focus时期不断演化，发展为支持AI驱动的**UFT One**。现今，该产品更名为**OpenText Functional Testing**，具备AI识别能力和高度脚本自定义的自动化功能。
+  最初起源于1998年的**Astra QuickTest (Mercury)**，在惠普和Micro Focus时期不断演化，发展为支持AI驱动的**UFT One**。现今，该产品更名为**OpenText Functional Testing**，具备AI识别能力和高度脚本自定义的UI自动化和UI测试功能。
 
 - 🧩 **代码规模：**  
   UFT拥有上亿行代码，涵盖C++、C#、Java、JavaScript与VBScript等多种语言，并与Windows和各种主流浏览器的自动化技术深度集成。

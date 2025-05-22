@@ -95,16 +95,16 @@ As a **Core Developer** and **Team Manager** for **Unified Functional Testing (U
 **UFT** (formerly **QTP**) is a flagship commercial test automation platform:
 
 - 🏛️ **Legacy & Evolution:**  
-  Born as *Astra QuickTest* in 1998 (Mercury), the product evolved through the HP and Micro Focus eras into today's AI-powered **UFT One**—delivering script-based and AI-driven automation capabilities.
+  Born as *Astra QuickTest* in 1998 (Mercury), the product evolved through the HP/HPE, Micro Focus and OpenText eras into today's AI-powered UFT One/OpenText Functional Testing—delivering script-based and AI-driven automation and ui-testing capabilities.
 
 - 🧩 **Codebase Scale:**  
-   UFT is built on a massive architecture comprising **hundreds of millions of lines** of code across **C++, C#, and VBScript**, with deep integrations into Windows APIs and COM-based technologies.
+   UFT is built on a massive architecture comprising hundreds of millions of lines of code across C++, C#, and VBScript, with deep integrations into Windows APIs and COM-based technologies.
 
 - 🌍 **Enterprise Adoption:**  
-  Trusted by more than **2,800** global enterprises, particularly in **Fortune 500** verticals such as finance, healthcare, and government sectors.
+  Trusted by more than 2,800 global enterprises, particularly in Fortune 500 verticals such as finance, healthcare, and government sectors.
 
 - 📊 **Market Share:**  
-  Holds approximately **2.14%** of the $22.2B automation testing market, generating **hundreds of millions USD** in annual revenue.
+  Holds approximately 2.14% of the $22.2B automation testing market, generating hundreds of millions USD in annual revenue.
 
 #### 🔹🤖🧠 UFT OCR Improvement – *2024-2025*
 
@@ -112,9 +112,9 @@ Legacy OCR engines such as `ABBYY` and `Tesseract` frequently underperformed in 
 
 To address these challenges, our team evaluated five potential solutions—including EasyOCR and enhanced Tesseract variants. Among them, the initial proof of concept (PoC) for a `Hybrid Text Identification` approach was initially rejected due to slow performance (~20 seconds per scan) and lack of word segmentation.
 
-After I joined the initiative, I optimized the algorithm to reduce the processing time from `~20s` to `~2s`, while also enhancing the extraction logic to include word boundary segmentation. As a result, my PoC was selected and successfully implemented.
+After I joined the initiative, I optimized the algorithm to reduce the processing time from **~20s** to **~2s**, while also enhancing the extraction logic to include word boundary segmentation. As a result, my PoC was selected and successfully implemented.
 
-The `Hybrid Text Identification solution` intelligently fuses OCR results with DOM-based web text extraction. Key challenges included handling complex styles, nested `iframe` structures, and ensuring minimal performance impact during test execution. This hybrid method significantly outperformed traditional engines, achieving up to `100%` accuracy on web-rendered text—substantially improving automation reliability in secure, offline environments.
+The `Hybrid Text Identification solution` intelligently fuses OCR results with DOM-based web text extraction. Key challenges included handling complex styles, nested `iframe` structures, and ensuring minimal performance impact during test execution. This hybrid method significantly outperformed traditional engines, achieving up to **100%** accuracy on web-rendered text—substantially improving automation reliability in secure, offline environments.
 
 #### 🔹🌐🧠 UFT Cloud Browser Architecture Redesign – *2024*
 
@@ -141,7 +141,7 @@ As the technical lead, I architected a lean Cloud Browser solution in collaborat
 - **Reimplemented** key automation features using browser extension APIs, eliminating dependencies on Windows-native APIs for improved cross-environment support.
 - **Established agile co-development practices**, including weekly syncs and daily hands-on code reviews with the partner team.
 
-This effort resulted in a fully functional UFT Cloud Browser released in just `4` months with only `4` developers**, dramatically outperforming the prior SRF initiative that required `3 years` and `~30 engineers`—demonstrating our engineering agility, architectural foresight, and ability to deliver high-value solutions under tight constraints.
+This effort resulted in a fully functional UFT Cloud Browser released in just **4** months with only **4** developers, dramatically outperforming the prior SRF initiative that required **3** years and **~30** engineers—demonstrating our engineering agility, architectural foresight, and ability to deliver high-value solutions under tight constraints.
 
 #### 🔹🧩🧪 UFT MV3 Extension Migration – *2022–2023*
 
@@ -241,40 +241,39 @@ This initiative not only transformed UFT's cloud execution capabilities but also
 
 `HP/HPE Mobile Center (MC)` is a mobile testing platform that enables QA teams to run tests on real iOS, Android, and Windows devices.  
 I was responsible for maintaining the UFT–MC integration and developing new features to extend its capabilities.  
-One of the key enhancements was adding MC Browser support, allowing UFT Web scripts to run on mobile browsers.  
+One of the key enhancements was adding `MC Browser` support, allowing UFT Web scripts to run on mobile browsers.  
 During this effort, I collaborated with MC founder Ameer during his visit to Shanghai, where we discussed and resolved key design challenges.  
 Based on the new design, we implemented a bridge service between two UFT add‑ins, enabling a single `TestObject` to function across both.  
 This design laid the groundwork for enabling future support of `Cross‑Browser Testing` within UFT.  
 
 #### 🔹📄🧾 UFT HTML Report Logger - *2015*
 
-Previously, UFT used the `Run Result Viewer (RRV)`, a legacy WinForms application, to display test run results. RRV was inefficient when handling large volumes of test steps and made sharing results difficult, as recipients needed to have UFT installed to view them. However, QA managers and stakeholders often needed access to these results without requiring the full UFT setup.
+Previously, UFT used the `UFT Run Result Viewer (RRV)`, a legacy WinForms application, to display test run results. RRV was inefficient when handling large volumes of test steps and made sharing results difficult, as recipients needed to have UFT installed to view them. However, QA managers and stakeholders often needed access to these results without requiring the full UFT setup.
 
 To address this, the FA and PM initiated the development of a new `HTML Report`, designed to be lightweight, shareable, and easy to view in any browser as a single self-contained `.html` file.
 
-I collaborated with another team member to implement this solution. I was responsible for developing the `HTML Report Logger`, which listens to events from the ScriptEngine, collects the necessary test step information, and writes the data into a structured JSON file. My teammate then handled the HTML generation in a separate process—styling the UI with embedded CSS and rendering the report using the JSON data.
+I collaborated with another team member to implement this solution. I was responsible for developing the `HTML Report Logger`, which listens to events from the `UFT ScriptEngine`, collects the necessary test step information, and writes the data into a structured JSON file. My teammate then handled the HTML generation in a separate process—styling the UI with embedded CSS and rendering the report using the JSON data.
 
-Through this project, I deepened my understanding of the UFT Execution Engine and became a key backend expert within the team.
-
+Through this project, I deepened my understanding of the `UFT Execution Engine` and became a key backend expert within the team.
 
 #### 🔹🖥️🔌UFT Remote Agent - *2014*
 
-`UFT Remote Agent` is a DCOM component used to enable remote test execution from ALM (formerly Quality Center). Originally developed in C++ many years ago, the component had evolved into a monolithic class of over 9000 lines of code. This made the system difficult to maintain, with frequent customer-reported bugs and limited modularity.
+`UFT Remote Agent` is a DCOM component used to enable remote test execution from `ALM/QC (formerly Quality Center)`. Originally developed in C++ many years ago, the component had evolved into a monolithic class of over 9000 lines of code. This made the system difficult to maintain, with frequent customer-reported bugs and limited modularity.
 
 Due to these challenges, the Software Architect decided to refactor the component using C#. I was responsible for leading this effort.
 
 I performed an in-depth analysis of the original codebase and worked closely with the ALM team to fully understand the integration points between UFT and ALM. Based on this understanding, I redesigned the class structure by separating responsibilities according to UFT’s functional areas. I also rebuilt the Remote Agent UI using WPF for a more modern and maintainable interface.
 
-One of the key challenges was performance: the new C# implementation initially lagged behind the original C++ version. I spent about a month optimizing performance using Visual Studio Profiler and implemented various improvements, including loading the `UFT AOM Agent` as an assembly to reduce cross-process communication overhead.
+One of the key challenges was performance: the new C# implementation initially lagged behind the original C++ version. I spent about a month optimizing performance using `Visual Studio Profiler` and implemented various improvements, including loading the `UFT AOM Agent` as an assembly to reduce cross-process communication overhead.
 
-In the end, the new UFT Remote Agent achieved comparable performance to the legacy version, delivered a cleaner UI, and significantly improved maintainability. For this work, I received my first **Team Star** award.
+In the end, the new `UFT Remote Agent` achieved comparable performance to the legacy version, delivered a cleaner UI, and significantly improved maintainability. For this work, I received my first **Team Star** award.
 
 ---
 
 ### 🌍 Other Notable Projects
 
 #### 🔹🇧🇮📊 Burundi Population Census System • *Jul 2013*
-Contributed as an independent developer to the design and deployment of a national data collection system, supporting Burundi’s presidential campaign. Helped improve system architecture and deployment strategy for field use.
+Contributed as an independent developer to the design and deployment of a national data collection system, supporting Burundi's presidential campaign. Helped improve system architecture and deployment strategy for field use.
 
 #### 🔹💧📡 Troll – Groundwater Monitoring • *May 2011*  
 Joined the team as an independent contributor. Developed a long-term environmental data monitoring solution featuring robust 3G data transmission. The system operated reliably with minimal maintenance for over 4 years.
