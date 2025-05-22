@@ -233,7 +233,7 @@ As a **core developer** on the UFT Backend team, I was responsible for designing
   - Enhanced platform reliability and user satisfaction  
 
 - **Ancillary Revenue Stream**  
-  - Published the Windows container–based Docker image on **Docker Hub**, generating an **unexpected $3-5 million/year** in additional revenue  
+  - Published the Windows container–based Docker image on **Docker Hub**, generating an **unexpected $2-3 million/year** in additional revenue  
 
 This initiative not only transformed UFT's cloud execution capabilities but also served as a blueprint for future containerized test automation solutions across the organization.
 
