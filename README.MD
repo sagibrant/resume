@@ -37,7 +37,7 @@
 ## 🧠 Technical Expertise
 
 - **Languages:** C++, C#, JavaScript  
-- **Technologies:** Browser Extensions, Web Automation, etc
+- **Technologies:** Windows App, Browser Extensions, Web Automation, etc
 - **Management Skills:** Six Thinking Caps, SLII Leadership, HBDI, etc
 
 ---
