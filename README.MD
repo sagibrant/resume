@@ -34,6 +34,12 @@
 
 ---
 
+## 🚀 Summary
+
+- 11-year Core R&D Engineer & 7-year Agile Team Lead for enterprise software UFT/QTP, responsible for maintaining and developing UFT Web/Mobile/AI add-ins. Earned rapid 5-level promotion in 5 years at HP/HPE. Proficient in C++, C#, JS/TS; experienced in cloud migration projects with Docker, Kubernetes, AWS; skilled in Windows application and WebExtension development. Drove automation innovation (2 patents) and excelled in global cross-team collaboration.
+
+---
+
 ## 🧠 Technical Expertise
 
 - **Languages:** C++, C#, JavaScript/TypeScript
@@ -62,72 +68,14 @@
 
 ---
 
-## 🚀 Professional Summary
+## 🛠 Projects – *2014–2025*
 
-- 🧹⚙️ **11 Years of Large-Scale Enterprise Software R&D Experience​**  
-  Served as a core R&D engineer for UFT/QTP, a renowned enterprise-level test automation software. Recognized for delivering scalable, complex solutions, resolving critical CPE incidents, spearheading the development of core features, driving innovation in automation tooling, and fostering collaboration across globally distributed teams. Proficient in C++, C#, and JavaScript/Typescript; experienced in using Docker, Kubernetes (k8s), AWS, and professionaly in developing Windows application and WebExtension. Due to outstanding performance, was promoted 5 levels in 5 years, rapidly advancing from an Entry-level role to M1 Manager. Addressed hundreds of real-world test development challenges for customers.​
+- **2025 - UFT OCR Improvement**   
+Legacy engines (ABBYY, Tesseract) underperformed on-premises, while cloud OCR faced privacy/infrastructure barriers. Initial Hybrid Text Identification PoC failed (20s/scan, no segmentation). I optimized the algorithm (20s→2s), added word segmentation, getting my PoC selected. The solution fused OCR with DOM text extraction, overcoming complex styles/nested iframes. Achieved 100% accuracy on web text, boosting automation reliability in secure/offline environments.
 
-- 📐🔍 **7 Years of R&D Team Management Experience​**  
-  Managed two core UFT R&D teams (5–7 members each), supporting approximately 300,000 active online test engineers from large enterprises. Proficient in Agile methodology: organized daily Scrum meetings, strictly oversaw Code Reviews, and ensured all R&D tasks were delivered on schedule and with high quality.​
-
-- 🌐⚡ **Global Cross-Team Collaboration**  
-  Participated in multiple cross-border/cross-regional joint development projects. Maintained efficient communication with teams in the US, Israel, Vietnam, Ukraine, Romania, India, Japan, and Singapore. Possess strong cross-cultural communication skills and proven experience in remote team collaboration.​
-
-- 🤖🧠 **Innovation Capabilities​**   
-  Prioritize innovation and knowledge sharing, solving problems flexibly without rigid constraints. Co-authored the following patents:​
-- **[Automated Identification of Input Elements in a GUI](https://patents.google.com/patent/US20220107883A1/en)**  
-  *Inventors:* Peng-Ji Yin, Cheng Hua, Jie Zhang
-- **[Recommending Programmatic Descriptions for Test Objects](https://patents.google.com/patent/US11698851B2/en)**  
-  *Inventors:* Peng-Ji Yin, Cheng Hua, Jie Zhang
-
----
-
-## 🛠 Recent Projects
-
-### 🧠📦 Unified Functional Testing (UFT/QTP) - *2014.7-2025.6*
-
-As a **Core Developer** and **Team Manager** for **Unified Functional Testing (UFT/QTP)**, I lead the team in delivering new features, handling customer issues (CPE incidents), and driving architectural modernization and innovation.
-
-**UFT** (formerly **QTP**) is a flagship commercial test automation platform:
-
-- 🏛️ **Legacy & Evolution:**  
-  Launched as *Astra QuickTest* in 1998 by Mercury, the product evolved through the HP/HPE, Micro Focus, and OpenText eras. Today, it exists as the AI-powered UFT One (now called OpenText Functional Testing)—delivering both script-based and AI-driven automation, plus UI testing capabilities.
-
-- 🧩 **Codebase Scale:**  
-  UFT is built on a robust, large-scale architecture with hundreds of millions of lines of code, spanning C++, C#, JavaScript/TypeScript, and VBScript. It also features deep integrations with Windows APIs and COM-based technologies.
-
-- 🌍 **Enterprise Adoption:**  
-  Trusted by over 2,800 enterprises worldwide—with strong adoption among Fortune 500 companies in critical sectors like finance, healthcare, and government.
-
-- 📊 **Market Performance:**  
-  Generates approximately $120 million in annual revenue and has roughly 300,000 online users globally.
-
-#### 🔹🤖🧠 UFT OCR Improvement – *2024-2025*
-
-Legacy OCR engines such as `ABBYY` and `Tesseract` frequently underperformed in on-premises environments, falling short of the accuracy needed for reliable AI automation. Additionally, many customers were unable to use cloud-based OCR services due to privacy constraints or infrastructure limitations.
-
-To address these challenges, our team evaluated five potential solutions—including EasyOCR and enhanced Tesseract variants. Among them, the initial proof of concept (PoC) for a `Hybrid Text Identification` approach was initially rejected due to slow performance (~20 seconds per scan) and lack of word segmentation.
-
-After I joined the initiative, I optimized the algorithm to reduce the processing time from **~20s** to **~2s**, while also enhancing the extraction logic to include word boundary segmentation. As a result, my PoC was selected and successfully implemented.
-
-The `Hybrid Text Identification solution` intelligently fuses OCR results with DOM-based web text extraction. Key challenges included handling complex styles, nested `iframe` structures, and ensuring minimal performance impact during test execution. This hybrid method significantly outperformed traditional engines, achieving up to **100%** accuracy on web-rendered text—substantially improving automation reliability in secure, offline environments.
-
-#### 🔹☁️🧪 UFT Cloud Browser – *2023-2024*
-
-Following the sunset of the `StormRunner Functional (SRF)` platform, market demand for a cloud-based browser automation solution remained strong. However, due to tight budget and resource constraints, stakeholders sought a lightweight alternative with minimal development overhead.
-
-As the technical lead, I architected a lean Cloud Browser solution in collaboration with the Digital Lab team, achieving rapid delivery with strategic reuse and design simplification:
-
-- **Leveraged** existing Digital Lab infrastructure and UFT browser extensions to minimize new implementation overhead.
-- **Redesigned** the communication layer using WebSocket-based messaging, replacing complex legacy pipelines with a streamlined, maintainable protocol.
-- **Reimplemented** key automation features using browser extension APIs, eliminating dependencies on Windows-native APIs for improved cross-environment support.
-- **Established agile co-development practices**, including weekly syncs and daily hands-on code reviews with the partner team.
-
-This effort resulted in a fully functional UFT Cloud Browser released in just **4** months with only **4** developers, dramatically outperforming the prior SRF initiative that required **3** years and **~30** engineers—demonstrating our engineering agility, architectural foresight, and ability to deliver high-value solutions under tight constraints.
-
----
-
-### 🔹🧩🧪 Other projects – *2014–2023*
+- **2023,2024 - UFT Cloud Browser**. 
+Post-StormRunner Functional (SRF) sunset, demand for cloud-based browser automation remained high—yet budget/resource constraints required a lightweight solution. As Technical Lead, I architected a lean build with the Digital Lab team: leveraged existing infrastructure/UFT extensions, redesigned communication via WebSocket (replacing complex legacy pipelines), reimplemented features using browser APIs (cutting Windows-native dependencies), and led agile co-development (weekly syncs, daily code reviews).  
+Launched a fully functional UFT Cloud Browser in 4 months with just 4 developers—dramatically outperforming SRF’s 3-year, ~30-engineer effort—proving agility, architectural foresight, and delivery under pressure.
 
 - **2022 - UFT Web Agent MV3 Migration**  
 Led the architectural restructuring and MV3 version upgrade of the UFT Web Agent. Reconstructed the Web Extension compilation logic using Gulp, resolving core technical bottlenecks such as cross-domain frame communication and Content Security Policy (CSP). Innovatively designed an event simulation solution based on Chrome DevTools Protocol (CDP) and MAIN WORLD, addressing numerous common user issues. This reduced customer support tickets by 33%, significantly enhancing product stability and user experience.  
@@ -161,5 +109,27 @@ Joined the team as an independent contributor. Developed a long-term environment
 
 - **2010 Botion Restaurant System**
 Joined a startup (xpfood.com) and led the end-to-end development of a CRM and POS system, including invoicing and card-based customer features. Delivered a complete, production-ready solution for restaurant management.
+
+---
+
+##  🧩 Additional Information
+
+### 🧠📦 Unified Functional Testing (UFT/QTP) - *2014.7-2025.6*
+
+I joined the UFT/QTP Shanghai team in 2014, advancing to Manager in 2018. Initially led the UFT Backend team, then transitioned to lead the UFT Web team—responsible for developing and maintaining UFT Web/Mobile/AI add-ins.
+
+**UFT** (formerly **QTP**) is a flagship commercial test automation platform:
+
+- 🏛️ **Legacy & Evolution:**  
+  Launched as *Astra QuickTest* in 1998 by Mercury, the product evolved through the HP/HPE, Micro Focus, and OpenText eras. Today, it exists as the AI-powered UFT One (now called OpenText Functional Testing)—delivering both script-based and AI-driven automation, plus UI testing capabilities.
+
+- 🧩 **Codebase Scale:**  
+  UFT is built on a robust, large-scale architecture with hundreds of millions of lines of code, spanning C++, C#, JavaScript/TypeScript, and VBScript. It also features deep integrations with Windows APIs and COM-based technologies.
+
+- 🌍 **Enterprise Adoption:**  
+  Trusted by over 2,800 enterprises worldwide—with strong adoption among Fortune 500 companies in critical sectors like finance, healthcare, and government.
+
+- 📊 **Market Performance:**  
+  Generates approximately $120 million in annual revenue and has roughly 300,000 online users globally.
 
 ---
