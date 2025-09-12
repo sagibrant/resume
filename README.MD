@@ -68,7 +68,7 @@
 
 ---
 
-## 🛠 Projects – *2014–2025*
+## 🛠 Projects
 
 - **2025 - UFT OCR Improvement**   
 Legacy engines (ABBYY, Tesseract) underperformed on-premises, while cloud OCR faced privacy/infrastructure barriers. Initial Hybrid Text Identification PoC failed (20s/scan, no segmentation). I optimized the algorithm (20s→2s), added word segmentation, getting my PoC selected. The solution fused OCR with DOM text extraction, overcoming complex styles/nested iframes. Achieved 100% accuracy on web text, boosting automation reliability in secure/offline environments.
