@@ -64,21 +64,22 @@
 
 ## 🚀 职业概述
 
-1. 11年大型企业级软件研发经验：
-担任著名的企业级自动化测试软件UFT/QTP的核心研发工程师，精通C++, C#, JavaScript/Typescript，使用过Typescript, Docker, k8s, AWS, WebExtension 等多种平台和技术。因杰出表现，5年晋升5级，快速从Entry升至M1经理，解决过数百个客户的实际测试开发问题。
+2014 年加入惠普（HP），担任企业级旗舰自动化测试软件 UFT/QTP 的核心研发工程师。期间经历多次组织重组与跨国并购（惠普（HP）→ 惠普企业（HPE）→ Micro Focus → OpenText），始终深耕产品与技术迭代，在软件自动化领域（GUI Testing 与 RPA）积累了深刻的实践认知。因工作表现突出，在 HP/HPE 任职期间，5 年内实现 5 级晋升，从初级岗位（Entry level）快速成长为经理（M1）。
 
-2. 7年研发团队管理经验：
-管理过两个UFT核心研发团队，每个团队人数在5-7人，服务对象为大约30万名活跃在线的大型企业的测试工程师。熟悉Agile，每日组织Scrum，严格把控Code Review，确保所有研发任务均按时高质量完成。
+1. 11年大型企业级软件研发经验：   
+精通 C++、C#、JavaScript/TypeScript；具备基于 Docker、Kubernetes、AWS 的云迁移项目实战经验；熟练掌握 Windows 应用与 WebExtension 全流程开发。
 
-3. 全球合作项目管理经验：
-参与多个跨国/跨地区的联合开发项目，与美国、以色列、越南、乌克兰、罗马尼亚、印度、日本、新加坡等地团队保持高效沟通，具备良好的跨文化沟通能力及远程团队协作经验。
+2. 7年研发团队管理经验：  
+曾带领 UFT Web 团队负责 UFT Web/Mobile/AI Add-ins 的研发任务，服务全球近 30 万名活跃的大企业 QA 工程师（质量保证工程师）。熟悉 Agile 敏捷开发流程，通过每日 Scrum 同步进度、严格把控 Code Review 质量，确保研发任务按时高质量交付。任职期间，该产品年平均营收约为 7000 万至 1 亿美元。
 
-4. 创新能力：
-注重创新和分享，不拘泥于形式解决问题，有以下合作专利：
-- **[Automated Identification of Input Elements in a GUI](https://patents.google.com/patent/US20220107883A1/en)**  
-  *Inventors:* Peng-Ji Yin, Cheng Hua, Jie Zhang
-- **[Recommending Programmatic Descriptions for Test Objects](https://patents.google.com/patent/US11698851B2/en)**  
-  *Inventors:* Peng-Ji Yin, Cheng Hua, Jie Zhang
+3. 全球合作项目管理经验：  
+曾参与多个跨国/跨区域联合开发项目，与美国、以色列、越南、乌克兰、罗马尼亚、印度、日本、新加坡等地的团队有过合作经历。 
+
+4. 创新能力：   
+擅长以灵活创新的思路解决技术痛点，合作拥有两项技术专利：
+- **[Automated Identification of Input Elements in a GUI](https://patents.google.com/patent/US20220107883A1/en)**  (Peng-Ji Yin, Cheng Hua, Jie Zhang)
+- **[Recommending Programmatic Descriptions for Test Objects](https://patents.google.com/patent/US11698851B2/en)**  (Peng-Ji Yin, Cheng Hua, Jie Zhang)
+
 ---
 
 ## 🛠 最近项目
