@@ -41,7 +41,7 @@
 I joined HP in 2014, serving as a core R&D engineer for UFT/QTP, a flagship enterprise-level automated testing software. I went through multiple organizational restructurings and cross-border mergers and acquisitions (HP → HPE → Micro Focus → OpenText), yet remained focused on the product and technology, developing a deep understanding of software automation (specifically GUI Testing & RPA). Recognized for outstanding performance, I was promoted 5 levels over 5 years at HP/HPE, rapidly advancing from Entry level to M1 Manager.
 
 1. 11 years of experience in large-scale enterprise software development.     
-Proficient in C++, C#, and JavaScript/TypeScript; experienced in cloud migration projects using Docker, Kubernetes, and AWS; skilled in Windows application and WebExtension development.
+Proficient in C++, C#, and JavaScript/TypeScript; experienced in cloud migration projects using Docker, Kubernetes, and AWS; skilled in Windows application and WebExtension development; and have resolved over a hundred practical challenges in automated testing for large enterprises.
 
 2. 7 years of R&D team management expertise.     
 I led the UFT Web team in developing UFT Web/Mobile/AI add-ins and served approximately 300,000 active enterprise QA engineers. During my tenure, the product’s average annual revenue was around $70–100 million.

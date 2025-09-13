@@ -67,7 +67,7 @@
 2014 年加入惠普（HP），担任企业级旗舰自动化测试软件 UFT/QTP 的核心研发工程师。期间经历多次组织重组与跨国并购（惠普（HP）→ 惠普企业（HPE）→ Micro Focus → OpenText），始终深耕产品与技术迭代，在软件自动化领域（GUI Testing 与 RPA）积累了深刻的实践认知。因工作表现突出，在 HP/HPE 任职期间，5 年内实现 5 级晋升，从初级岗位（Entry level）快速成长为经理（M1）。
 
 1. 11年大型企业级软件研发经验：   
-精通 C++、C#、JavaScript/TypeScript；具备基于 Docker、Kubernetes、AWS 的云迁移项目实战经验；熟练掌握 Windows 应用与 WebExtension 全流程开发。
+精通 C++、C#、JavaScript/TypeScript；具备基于 Docker、Kubernetes、AWS 的云迁移项目实战经验；熟练掌握 Windows 应用与 WebExtension 全流程开发；累计解决上百个大型企业自动化测试的实际难题。
 
 2. 7年研发团队管理经验：  
 曾带领 UFT Web 团队负责 UFT Web/Mobile/AI Add-ins 的研发任务，服务全球近 30 万名活跃的大企业 QA 工程师（质量保证工程师）。熟悉 Agile 敏捷开发流程，通过每日 Scrum 同步进度、严格把控 Code Review 质量，确保研发任务按时高质量交付。任职期间，该产品年平均营收约为 7000 万至 1 亿美元。
