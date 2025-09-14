@@ -35,24 +35,25 @@
 ---
 
 ## 🚀 Short Summary
-11-year Core R&D Engineer & 7-year Agile Team Lead for enterprise software UFT/QTP, responsible for maintaining and developing UFT Web/Mobile/AI add-ins. Earned rapid 5-level promotion in 5 years at HP/HPE. Proficient in C++, C#, JS/TS; experienced in cloud migration projects with Docker, Kubernetes, AWS; skilled in Windows application and WebExtension development. Drove automation innovation (2 patents) and excelled in global cross-team collaboration.
+    11-year Core R&D Engineer & 7-year Agile Team Lead for enterprise software UFT/QTP, responsible for maintaining and developing UFT Web/Mobile/AI add-ins. Earned rapid 5-level promotion in 5 years at HP/HPE. Proficient in C++, C#, JS/TS; experienced in cloud migration projects with Docker, Kubernetes, AWS; skilled in Windows application and WebExtension development. Drove automation innovation (2 patents) and excelled in global cross-team collaboration.
 
 ## 📦 Professional Summary
+
 I joined HP in 2014, serving as a core R&D engineer for UFT/QTP, a flagship enterprise-level automated testing software. I went through multiple organizational restructurings and cross-border mergers and acquisitions (HP → HPE → Micro Focus → OpenText), yet remained focused on the product and technology, developing a deep understanding of software automation (specifically GUI Testing & RPA). Recognized for outstanding performance, I was promoted 5 levels over 5 years at HP/HPE, rapidly advancing from Entry level to M1 Manager.
 
-1. 11 years of experience in large-scale enterprise software development.     
+- 11 years of experience in large-scale enterprise software development.    
 Proficient in C++, C#, and JavaScript/TypeScript; experienced in cloud migration projects using Docker, Kubernetes, and AWS; skilled in Windows application and WebExtension development; and have resolved over a hundred practical challenges in automated testing for large enterprises.
 
-2. 7 years of R&D team management expertise.     
-I led the UFT Web team in developing UFT Web/Mobile/AI add-ins and served approximately 300,000 active enterprise QA engineers. During my tenure, the product’s average annual revenue was around $70–100 million.
+- 7 years of R&D team management expertise.   
+I led the UFT Web team in developing UFT Web/Mobile/AI add-ins and served approximately 300,000 active enterprise QA engineers. During my tenure, the product’s average annual revenue was around $70-100 million.
 
-3. Proven global collaboration experience.     
+- Proven global collaboration experience.   
 I successfully participated in multiple cross-regional joint development tasks and have worked with teams across the US, Israel, Vietnam, Ukraine, Romania, India, Japan, and Singapore.
 
-4. Strong focus on innovation.    
+- Strong focus on innovation.   
 I adopt a flexible approach to problem-solving and am a co-inventor of two patents:
-- "Automated Identification of Input Elements in a GUI" (Peng-Ji Yin, Cheng Hua, Jie Zhang).
-- "Recommending Programmatic Descriptions for Test Objects" (Peng-Ji Yin, Cheng Hua, Jie Zhang).
+    - "Automated Identification of Input Elements in a GUI" (Peng-Ji Yin, Cheng Hua, Jie Zhang).
+    - "Recommending Programmatic Descriptions for Test Objects" (Peng-Ji Yin, Cheng Hua, Jie Zhang).
 
 ---
 

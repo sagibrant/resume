@@ -68,48 +68,35 @@ Co-developed 2 patents with colleagues, contributing to UFT’s technical innova
 
 #### 🔹🤖🧠 UFT OCR Improvement – *2024-2025*
 
-Legacy OCR engines such as `ABBYY` and `Tesseract` frequently underperformed in on-premises environments, falling short of the accuracy needed for reliable AI automation. Additionally, many customers were unable to use cloud-based OCR services due to privacy constraints or infrastructure limitations.
+- Background     
+UFT uses on-prem OCR engines (Abbyy and Tesseract) for text recognition in its AI steps. These engines often misrecognize characters in real customer environments—due to screen size changes, dynamic styles, and varying backgrounds. Most customers lack the ability to retrain the text recognition data themselves.
 
-To address these challenges, our team evaluated five potential solutions—including EasyOCR and enhanced Tesseract variants. Among them, the initial proof of concept (PoC) for a `Hybrid Text Identification` approach was initially rejected due to slow performance (~20 seconds per scan) and lack of word segmentation.
+- Challenge    
+Our major customers are large companies with strict privacy policies, so they can’t use cloud-based OCR solutions. We also needed to avoid heavy AI engines, as most QA engineers’ machines have limited performance. The goal was to find an on-prem OCR improvement solution with low resource usage.
 
-After I joined the initiative, I optimized the algorithm to reduce the processing time from **~20s** to **~2s**, while also enhancing the extraction logic to include word boundary segmentation. As a result, my PoC was selected and successfully implemented.
+- Contribution   
+I developed a Hybrid Text Identification solution for OCR recognition on web pages. A similar idea was proposed years ago but rejected due to poor performance (slow processing) and lack of word segmentation. I optimized the algorithm to reduce processing time from ~20 seconds to ~2 seconds. I also added line, word, and character segmentation using browser APIs—making the solution viable.
 
-The `Hybrid Text Identification solution` intelligently fuses OCR results with DOM-based web text extraction. Key challenges included handling complex styles, nested `iframe` structures, and ensuring minimal performance impact during test execution. This hybrid method significantly outperformed traditional engines, achieving up to **100%** accuracy on web-rendered text—substantially improving automation reliability in secure, offline environments.
-
-
----
-
-
-#### 🔹🌐🧠 UFT Cloud Browser Architecture Redesign – *2024*
-
-The original UFT Cloud Browser architecture, built around a lightweight Java connector and direct WebSocket communication with browser extensions, lacked the flexibility and integration depth required by modern AI automation use cases.
-
-A key limitation was its incompatibility with UFT AI’s native Windows-based architecture, which relies heavily on COM objects and Windows message communication. To bridge this gap, I led a comprehensive architectural redesign of the Cloud Browser platform.
-
-Key contributions include:
-
-- **Redesigned the communication framework** to support a modular, protocol-agnostic message system compatible with standard I/O, Native Messaging, and web requests—while maintaining alignment with UFT's existing messaging conventions.
-- **Rewrote the input simulation modules** from the ground up to accommodate AI-driven interaction logic.
-- **Built a new execution engine** that orchestrates complex automation steps and delegates execution across isolated driver processes—enhancing maintainability and parallelization.
-
-The result is a robust, scalable Cloud Browser platform that seamlessly supports UFT AI automation workflows and meets enterprise-level stability and extensibility requirements.
+- Result   
+The Hybrid Text Identification solution significantly improved OCR accuracy, achieving up to 100% accuracy on most texts users care about. It made UFT AI steps run more stably and reliably. This hybrid solution was highly recognized and will be widely applied to other add-ins and automation products in our portfolio.
 
 
 ---
 
 
-#### 🔹☁️🧪 UFT Cloud Browser Quick-Win Initiative – *2023*
+#### 🔹☁️🧪 UFT Cloud Browser – *2023-2024*
 
-Following the sunset of the `StormRunner Functional (SRF)` platform, market demand for a cloud-based browser automation solution remained strong. However, due to tight budget and resource constraints, stakeholders sought a lightweight alternative with minimal development overhead.
+- Background    
+Our Cloud Browser platform, StormRunner Functional (SRF), was shut down due to budget and revenue issues. However, market demand for a cloud-based browser automation solution stayed strong. With tight budgets and limited resources, stakeholders wanted a lightweight alternative that required minimal development work. As the technical lead, I was tasked with designing a new UFT Cloud Browser solution alongside the Digital Lab team.
 
-As the technical lead, I architected a lean Cloud Browser solution in collaboration with the Digital Lab team, achieving rapid delivery with strategic reuse and design simplification:
+- Challenge    
+The old SRF solution was over-designed and costly. We needed a quick, simple solution that reused existing infrastructure to cut costs.
 
-- **Leveraged** existing Digital Lab infrastructure and UFT browser extensions to minimize new implementation overhead.
-- **Redesigned** the communication layer using WebSocket-based messaging, replacing complex legacy pipelines with a streamlined, maintainable protocol.
-- **Reimplemented** key automation features using browser extension APIs, eliminating dependencies on Windows-native APIs for improved cross-environment support.
-- **Established agile co-development practices**, including weekly syncs and daily hands-on code reviews with the partner team.
+- Contribution   
+I worked with the Digital Lab team to architect a lean Cloud Browser solution. We reused Digital Lab’s existing Auto Scaling design to host Cloud Browser environments. I rewrote the communication layer to use WebSocket-based messaging instead of Window Message-based messaging. We also added new automation libraries to simulate mouse and keyboard actions during replay.
 
-This effort resulted in a fully functional UFT Cloud Browser released in just **4** months with only **4** developers, dramatically outperforming the prior SRF initiative that required **3** years and **~30** engineers—demonstrating our engineering agility, architectural foresight, and ability to deliver high-value solutions under tight constraints.
+- Result    
+We launched the new UFT Cloud Browser solution in just 4 months with a hybrid team of 4 developers. It’s robust, scalable, and easy to extend to support other technologies in the future. This project highlighted our team’s strong ability to act quickly and think creatively.
 
 
 ---
@@ -117,16 +104,20 @@ This effort resulted in a fully functional UFT Cloud Browser released in just **
 
 #### 🔹🧩🧪 UFT MV3 Extension Migration – *2022–2023*
 
-With the deprecation of `Manifest V2 (MV2)` by Chromium, I led the successful migration of UFT's browser extensions to `Manifest V3 (MV3)` to ensure continued compatibility with Chrome and Edge.
+- Background    
+UFT uses browser extensions as browser agents for automation testing. As Chromium deprecates Manifest V2 (MV2), we had to migrate the existing browser extension to Manifest V3 (MV3) to keep UFT compatible with Chrome and Edge long-term.
 
-Key technical contributions included:
+- Challenge   
+Key differences between MV2 and MV3 blocked the migration:
+    - MV3 extensions use service workers for background tasks (instead of persistent pages), which idle after 5 minutes—disrupting continuous automation.
+    - MV3 enforces stricter Content Security Policy (CSP), which blocks external script execution critical to UFT’s workflow.
+    - Deprecated APIs like webRequest and webRequestBlocking—used for header modification logic—no longer work in MV3.
 
-- **Redesigned the extension messaging architecture**, replacing legacy `window.postMessage` patterns with modern `Extension APIs` for enhanced security and maintainability.
-- **Implemented an asynchronous frame hierarchy construction mechanism**, ensuring non-blocking JavaScript execution within content scripts—crucial for high-performance automation scenarios.
-- **Engineered a custom user script evaluation pipeline** to bypass MV3’s stricter `Content Security Policy (CSP)` restrictions, allowing automation to continue handling `href="javascript:"` link interactions where default click simulation fails.
-- Ensured **full backward compatibility** while upgrading over **100,000+** customer environments, with no disruptions and noticeable performance gains.
+- Contribution   
+I redesigned the extension’s communication logic and added reconnection mechanisms to adapt to MV3’s service worker idle behavior. To bypass CSP restrictions, I integrated the Chrome DevTools Protocol (CDP). I also added a Force-Install option for users, letting them turn on the webRequest and webRequestBlocking APIs in enterprise mode.
 
-This work safeguarded long-term extensibility and performance of UFT's web automation capabilities under the evolving Chromium extension ecosystem.
+- Result   
+The MV3 extension migration was completed successfully. This work protected UFT’s web automation capabilities from Chromium’s ecosystem changes, ensuring long-term compatibility with modern browsers.
 
 
 ---
@@ -134,38 +125,35 @@ This work safeguarded long-term extensibility and performance of UFT's web autom
 
 #### 🔹🧩⚡ UFT Web Fast Run Mode – *2020–2021*
 
-As modern browsers evolved and customers transitioned away from IE, the legacy UFT Web Add-in architecture—originally optimized for IE—began to show severe performance degradation, particularly on complex web pages. This was exacerbated by the shift from native C++ extensions to JavaScript-based extensions, as well as the migration of communication from direct object access to a bridged messaging model.
+- Background    
+Many UFT users are migrating their web testing scripts from IE to modern browsers like Chrome, Edge, and Firefox. After migration, they noticed significant performance drops. One critical issue reported by customers: test steps using Virtual Relation Identification (VRI) slowed from 3 seconds to over 3 minutes—badly disrupting their daily automation workflows.
 
-One major enterprise customer reported a critical slowdown: test steps using `Virtual Relation Identification (VRI)` degraded from 3 seconds to over 3 minutes, severely impacting usability.
+- Challenge    
+The UFT Web Add-in is one of UFT’s oldest and most complex components, with ~400,000 lines of code. It was originally designed and optimized for IE (including legacy code for IE 5). Since over 90% of UFT users rely on the Web Add-in for web testing, we couldn’t risk any functional regressions while improving performance.
 
-To address this:
+- Contribution   
+First, we researched and identified the root cause: excessive redundant communication between UFT and browser agents for each test step. To fix this, I designed a new UFT Web automation protocol that ensures one message per step. I also added a new layout to capture and redirect function calls from testing scripts—letting us rewrite web methods one by one without causing unexpected regressions.
 
-- 🔍 Conducted deep analysis across **400,000+** lines of legacy code to trace performance bottlenecks and architectural inefficiencies.
-- 🧠 Identified key issues: excessive attribute query messages, redundant existence checks, and high I/O overhead due to fragmented communication.
-- 🛠️ Designed a new UFT Web protocol layer, introducing a unified atom message format that encapsulates all step data in a single request—replacing 10–60 fragmented messages per step with a single round-trip.
-- 🚀 Resulted in **3×** average performance improvement on standard browsers and **5×** improvement in WebDriver-based environments (e.g., test runtime reduced from 20 minutes to 4 minutes).
-- 💡 Specifically, for the VRI-heavy scenario, execution time improved from 3 minutes to 5 seconds.
-- 📘 Beyond technical gains, this initiative helped upskill the team and deepen collective understanding of the 15+ year-old UFT Web codebase.
-
-This deep refactor not only boosted performance but also enhanced team understanding of the 15+ year-old codebase, enabling more confident modernization in future cycles.
+- Result    
+The new UFT Web Fast Run mode improved performance by about 3x compared to the old solution. For VRI-heavy scenarios, execution time dropped from 3 minutes to just 5 seconds. This deep refactor not only boosted performance but also helped the entire team better understand the UFT Web codebase—enabling more confident modernization in future updates.
 
 
 ---
 
 
-#### 🔹🧠🔤 UFT TextObject Feature – *2019*  
+#### 🔹🧠🔤 UFT TextObject – *2019*  
 
-Traditional UFT `TestObject`s are tightly coupled with specific automation technologies such as Web, UI Automation, Java, .NET, and WPF. However, real-world scenarios often expose environments where these technologies fail due to limitations in hooking or restricted access to application internals.
+- Background    
+Traditional UFT TestObject is tightly coupled with specific automation technologies like Web, UI Automation, Java, .NET, and WPF. However, many large, security-focused organizations block these traditional hook/injection solutions—making UFT unusable in their environments.
 
-UFT previously introduced the `InsightObject`, which used image comparison to simulate interactions. While useful, its reliability degraded under variable screen resolutions, DPI settings, or scaling factors, making it unsuitable for many customer environments.
+- Challenge    
+We needed a reliable fallback solution for when injection/hook methods are prohibited in a customer’s environment.
 
-To address this, I proposed and designed a new kind of `TestObject`—`TextObject`:
+- Contribution   
+I proposed and designed a new type of TestObject: TextObject. It uses UFT’s OCR engine to recognize text, locate positions, and execute automation actions.
 
-- Utilizes OCR-based text recognition to locate UI elements by visual text instead of DOM or accessibility hooks.
-- Simulates user interactions (keyboard/mouse) based on the text's screen coordinates, effectively bypassing traditional element hierarchies.
-- Offers a robust fallback where injection-based or native API automation is not feasible, especially in secured environments that prohibit hooking technologies.
-
-This innovation enabled large, security-conscious organizations to continue functional testing and automation without compromising infrastructure policies—bridging a critical gap in UFT's automation capabilities.
+- Result   
+This innovation let large companies continue functional testing and automation without violating their infrastructure policies—filling a critical gap in UFT’s automation capabilities.
 
 
 ---
@@ -173,25 +161,20 @@ This innovation enabled large, security-conscious organizations to continue func
 
 #### 🔹🧪⚙️ UFT Parallel Execution – *2018*
 
-Historically, `UFT (Unified Functional Testing)` did not support parallel test execution—a major bottleneck for customers aiming to accelerate their automation pipelines. Despite UFT’s minimal memory (sub-200MB) and CPU footprint, each test instance required a separate machine due to architectural limitations.
+- Background  
+Historically, UFT (Unified Functional Testing) didn’t support parallel test execution. This was a big bottleneck for customers trying to speed up their automation pipelines. It became critical when pre-sales teams reported losing deals to competitors—who could run 10+ mobile tests in parallel on a single laptop. 
 
-This gap became critical when pre-sales teams reported losing deals to competitors who could run 10+ mobile tests in parallel on a single laptop.
+- Challenge 
+UFT’s core is built on 4 million lines of legacy code. It relied heavily on singleton COM objects and was designed under the assumption of one instance per user session. Many modules weren’t built to handle concurrent execution or isolate instances from each other. 
 
-**Technical Challenge:**
-- UFT’s core consists of **4 million** lines of legacy code, heavily reliant on singleton COM objects and assumptions of a single instance per machine.
-- Many modules were not designed to support concurrent execution contexts or isolation.
+- Contribution  
+I focused first on UFT Mobile Parallel Execution. I removed unnecessary dependencies in UFT Mobile testing and refactored the required legacy components to support parallel runs. Then, I developed key components:
+    - UFT ParallelRunner to manage parallel executions
+    - qtdrv to host each test instance
+    - UFT Parallel Report to show summarized results of parallel runs
 
-**My Contributions:**
-- Leveraged prior experience from `UFT Cloud Execution on SRF` to develop a proof-of-concept for `UFT Mobile Parallel Execution`.
-- Refactored legacy components, removing unnecessary dependencies while isolating the mobile execution logic into a standalone runner.
-- Enabled `10+` mobile test instances to run concurrently in a single user session, maintaining speed, reliability, and resource efficiency.
-
-**Outcome & Impact:**
-- The POC received the recognition from the Direct manager and shifted product strategy: PM reprioritized the roadmap to focus on parallel execution.
-- Led the team in launching the `UFT ParallelRunner`, later extended to `UFT Web add-in` and `Java add-in`.
-- Empowered pre-sales to successfully compete in critical deals.
-- QA teams experienced significant test cycle reduction, dramatically improving CI/CD throughput.
-- Promoted to **Manager I** in recognition of this high-impact delivery.
+- Result  
+I delivered the UFT Mobile Parallel Execution solution, which was highly praised by senior managers. The PM team reprioritized the roadmap to expand this capability—first to UFT Web, then to UFT Java. For this high-impact work, I was promoted to **Manager I**.
 
 
 ---
@@ -199,31 +182,17 @@ This gap became critical when pre-sales teams reported losing deals to competito
 
 #### 🔹☁️🧱 UFT Cloud Execution on SRF - *2016-2017*
 
-`StormRunner Functional (SRF)` is a cloud‑based solution for executing functional tests on web and mobile applications. It provides a virtual lab with multiple browsers, operating systems, and mobile devices—allowing teams to run tests across diverse environments without managing infrastructure.
+- Background  
+StormRunner Functional (SRF) is a cloud-based solution for running functional tests on web and mobile apps. It provides a virtual environment with multiple browsers, operating systems, and mobile devices—letting teams test across different setups without managing their own infrastructure. My role was to design and build the UFT Cloud Execution solution for SRF.
 
-As a core developer on the UFT Backend team, I was responsible for designing and implementing the `UFT Cloud Execution` solution:
+- Challenge   
+UFT could only run tests on Windows environments. Using AWS EC2 machines to host UFT test runs was too expensive. Also, SRF was fully deployed on AWS using Kubernetes and only supported Linux containers—making UFT integration tricky.
 
-- **Initial AWS EC2 Implementation**  
-  Delivered a working prototype that ran UFT One tests on AWS EC2 instances. While functionally complete, this approach incurred high costs and lacked scalability alongside SRF’s Kubernetes‑managed services.
+- Contribution  
+I researched Windows container technology and got UFT to run in Windows containers, then published the UFT Windows Docker image. I built the UFT Engine, Executor, and Agent modules using TypeScript (following SRF’s architecture) to create and manage UFT test runs inside the container instances on AWS EC2. I also traveled to Yehud to work with the DevOps team, helping register the UFT execution service with SRF. This made UFT Cloud Execution available on SRF.
 
-- **Windows Container Migration**  
-  Re‑architected the solution using Windows container technology to align with SRF’s K8s‑native infrastructure. Outcomes:  
-  - **75%** cost reduction (down to one‑quarter of EC2 expenses)  
-  - Fully horizontally scalable within SRF’s container cluster  
-
-- **Cross‑Region Collaboration**  
-  - Partnered with engineering and DevOps teams across multiple regions  
-  - Presented the proof‑of‑concept in Israel to senior pillar managers  
-  - Worked directly with the Israel DevOps team to integrate Windows containers into SRF’s Kubernetes pipelines  
-
-- **Business Impact**  
-  - Empowered UFT on‑premises customers to seamlessly transition to SRF’s cloud platform  
-  - Enhanced platform reliability and user satisfaction  
-
-- **Ancillary Revenue Stream**  
-  - Published the Windows container–based Docker image on Docker Hub, generating an unexpected `$2-3` million/year in additional revenue  
-
-This initiative not only transformed UFT's cloud execution capabilities but also served as a blueprint for future containerized test automation solutions across the organization.
+- Result   
+UFT Cloud Execution launched successfully on SRF. Additionally, publishing the UFT Windows Docker image on Docker Hub brought in an unexpected $2–3 million in annual revenue.
 
 
 ---
@@ -231,12 +200,21 @@ This initiative not only transformed UFT's cloud execution capabilities but also
 
 #### 🔹📱🔗 HP/HPE Mobile Center Integration - *2016*
 
-`HP/HPE Mobile Center (MC)` is a mobile testing platform that enables QA teams to run tests on real iOS, Android, and Windows devices.  
-I was responsible for maintaining the UFT–MC integration and developing new features to extend its capabilities.  
-One of the key enhancements was adding `MC Browser` support, allowing UFT Web scripts to run on mobile browsers.  
-During this effort, I collaborated with MC founder Ameer during his visit to Shanghai, where we discussed and resolved key design challenges.  
-Based on the new design, we implemented a bridge service between two UFT add‑ins, enabling a single `TestObject` to function across both.  
-This design laid the groundwork for enabling future support of `Cross‑Browser Testing` within UFT.  
+- Background  
+HP/HPE Mobile Center (MC) is a mobile testing platform that lets QA teams run tests on real iOS, Android, and Windows devices. My role was to maintain the UFT–MC integration, develop new features, and support customers.
+
+- Challenge   
+This was an ongoing integration task for me from 2016 to 2025. The main challenge was keeping up with continuous development while better meeting diverse customer requirements.
+
+- Contribution  
+I worked on hundreds of user stories, defects, and use cases. Key contributions include:
+    - Cross Browser Testing: Enabled pure UFT Web scripts to run on mobile browsers.
+    - Code Refactoring: Redesigned Record and Run settings from MFC to WPF; refactored the communication module to stabilize connections.
+    - Parallel Execution: Built UFT Mobile Parallel Execution functionality.
+    - Cloud Browser: Expanded capabilities from mobile testing to include desktop browser testing (extending from Mobile Center to Digital Lab).
+
+- Result   
+UFT Mobile testing became increasingly stable over time and grew to be a preferred choice among our customers.
 
 
 ---
@@ -244,13 +222,17 @@ This design laid the groundwork for enabling future support of `Cross‑Browser 
 
 #### 🔹📄🧾 UFT HTML Report Logger - *2015*
 
-Previously, UFT used the `UFT Run Result Viewer (RRV)`, a legacy WinForms application, to display test run results. RRV was inefficient when handling large volumes of test steps and made sharing results difficult, as recipients needed to have UFT installed to view them. However, QA managers and stakeholders often needed access to these results without requiring the full UFT setup.
+- Background  
+Before, UFT used the UFT Run Result Viewer (RRV)—a legacy WinForms app—to show test run results. RRV had two big issues: it worked slowly with large numbers of test steps, and sharing results was hard (people needed UFT installed to view them). But QA managers and stakeholders often needed to access results without the full environment setup. To fix this, the FA (Functional Architecture) and PM (Product Manager) plan to develop a new HTML Report. The goal was to make it lightweight, easy to share, and viewable in any browser as a single self-contained .html file.
 
-To address this, the FA and PM initiated the development of a new `HTML Report`, designed to be lightweight, shareable, and easy to view in any browser as a single self-contained `.html` file.
+- Challenge   
+The old UFT RRV could easily use all existing modules (.dll files) to extract binary test result data and show it on the UI. But the new HTML Report couldn’t use these modules. To give the HTML Report the same features as RRV, we had to re-design the data structure and convert the collected test data into this new structure.
 
-I collaborated with another team member to implement this solution. I was responsible for developing the `HTML Report Logger`, which listens to events from the `UFT ScriptEngine`, collects the necessary test step information, and writes the data into a structured JSON file. My teammate then handled the HTML generation in a separate process—styling the UI with embedded CSS and rendering the report using the JSON data.
+- Contribution  
+First, I designed a new data structure that could be converted into JSON format. Then, I built the HTML Report Logger: it listens to events from the UFT ExecutionEngine, collects all necessary test result information, and writes this data into a structured JSON file.
 
-Through this project, I deepened my understanding of the `UFT Execution Engine` and became a key backend expert within the team.
+- Result   
+The new HTML Report was widely accepted by users. Also, through this project, I deepened my understanding of the UFT ExecutionEngine and became a key backend expert in the team.
 
 
 ---
@@ -258,14 +240,16 @@ Through this project, I deepened my understanding of the `UFT Execution Engine` 
 
 #### 🔹🖥️🔌UFT Remote Agent - *2014*
 
-`UFT Remote Agent` is a DCOM component used to enable remote test execution from `ALM/QC (formerly Quality Center)`. Originally developed in C++ many years ago, the component had evolved into a monolithic class of over 9000 lines of code. This made the system difficult to maintain, with frequent customer-reported bugs and limited modularity.
+- Background  
+The UFT Remote Agent is a DCOM component that lets users run tests remotely from ALM/QC (formerly Quality Center). It was an old component—hard to maintain, with frequent bugs reported by customers and little modularity. The Software Architect decided to refactor it using C#, and I led this refactoring work.
 
-Due to these challenges, the Software Architect decided to refactor the component using C#. I was responsible for leading this effort.
+- Challenge  
+The original UFT Remote Agent was built in C++ years ago. Over time, it became a single "monolithic" class with more than 9,000 lines of code—hard to read and understand. The new version had to use C#. If we just copied the old design, performance would drop, but we needed the same (or better) performance. Redesigning it while keeping/improving performance was very challenging.
 
-I performed an in-depth analysis of the original codebase and worked closely with the ALM team to fully understand the integration points between UFT and ALM. Based on this understanding, I redesigned the class structure by separating responsibilities according to UFT’s functional areas. I also rebuilt the Remote Agent UI using WPF for a more modern and maintainable interface.
+- Contribution  
+I analyzed the original codebase deeply and worked closely with the ALM team to fully understand how UFT and ALM connect. Based on this, I redesigned the class structure—splitting responsibilities to match UFT’s functional areas. I also rebuilt the Remote Agent’s UI with WPF, making it more modern and easier to maintain. For about a month, I used Visual Studio Profiler to optimize performance. One key improvement: I loaded the UFT AOM Agent as an assembly to cut down on cross-process communication overhead.
 
-One of the key challenges was performance: the new C# implementation initially lagged behind the original C++ version. I spent about a month optimizing performance using `Visual Studio Profiler` and implemented various improvements, including loading the `UFT AOM Agent` as an assembly to reduce cross-process communication overhead.
-
-In the end, the new `UFT Remote Agent` achieved comparable performance to the legacy version, delivered a cleaner UI, and significantly improved maintainability. For this work, I received my first **Team Star** award.
+- Result   
+The new UFT Remote Agent performed as well as the old version. It had a cleaner UI and was much easier to maintain. For this work, I got my first **Team Star** award.
 
 ---
