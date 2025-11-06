@@ -35,7 +35,7 @@
 ---
 
 ## 🚀 Short Summary
-    11-year Core R&D Engineer & 7-year Agile Team Lead for enterprise software UFT/QTP, responsible for maintaining and developing UFT Web/Mobile/AI add-ins. Earned rapid 5-level promotion in 5 years at HP/HPE. Proficient in C++, C#, JS/TS; experienced in cloud migration projects with Docker, Kubernetes, AWS; skilled in Windows application and WebExtension development. Drove automation innovation (2 patents) and excelled in global cross-team collaboration.
+  11-year Core R&D Engineer & 7-year Agile Team Lead for enterprise software UFT/QTP, responsible for maintaining and developing UFT Web/Mobile/AI add-ins. Earned rapid 5-level promotion in 5 years at HP/HPE. Proficient in C++, C#, JS/TS; experienced in cloud migration projects with Docker, Kubernetes, AWS; skilled in Windows application and WebExtension development. Drove automation innovation (2 patents) and excelled in global cross-team collaboration.
 
 ## 📦 Professional Summary
 
@@ -55,6 +55,9 @@ I adopt a flexible approach to problem-solving and am a co-inventor of two paten
     - "Automated Identification of Input Elements in a GUI" (Peng-Ji Yin, Cheng Hua, Jie Zhang).
     - "Recommending Programmatic Descriptions for Test Objects" (Peng-Ji Yin, Cheng Hua, Jie Zhang).
 
+- End-to-end independent R&D capability   
+Building on 11 years of enterprise-level automation technology expertise, I independently delivered the lightweight web automation tool Gogogo from scratch through the entire lifecycle—encompassing pain point identification, Web Extension technology selection, full-stack development, AI feature integration, testing & validation, and publication on Chrome/Edge web stores—achieving a closed-loop delivery of a lightweight "out-of-the-box" product.
+
 ---
 
 ## 🧠 Technical Expertise
@@ -62,16 +65,6 @@ I adopt a flexible approach to problem-solving and am a co-inventor of two paten
 - **Languages:** C++, C#, JavaScript/TypeScript
 - **Technologies:** Windows App, Browser Extensions, Web Automation, etc
 - **Management Skills:** Six Thinking Caps, SLII Leadership, HBDI, etc
-
----
-
-## 🌟 Recent Highlights
-
-- 🧠**Hybrid OCR Solution:**  
-  Engineered a hybrid text-recognition system that drastically improved local OCR accuracy for AI automation.
-
-- 🖱**Coordinate Transformation Algorithm:**  
-  Built a cross-scale algorithm to map screen coordinates to viewport coordinates—solving persistent UI inspection offset issues.
 
 ---
 
@@ -83,19 +76,23 @@ I adopt a flexible approach to problem-solving and am a co-inventor of two paten
 - **[Recommending Programmatic Descriptions for Test Objects](https://patents.google.com/patent/US11698851B2/en)**  
   *Inventors:* Peng-Ji Yin, Cheng Hua, Jie Zhang
 
+
 ---
 
 ## 🛠 Projects
 
+- **2025 - 🌟 Gogogo**   
+With 11 years of enterprise-level automated testing R&D experience, I independently developed Gogogo, an ultra-lightweight Web Extension-based tool for Web testing and RPA. It features zero dependencies and no complex deployment—usable right after browser extension installation without extra tools (Selenium/Playwright) or runtime environments (Node.js/Python). Equipped with AI-powered code generation via element selection, it enables users without programming skills to create scripts easily. Running in browser sandbox, it ensures zero local system intrusion and no data collection for security. 
+
 - **2025 - UFT OCR Improvement**   
 Legacy engines (ABBYY, Tesseract) underperformed on-premises, while cloud OCR faced privacy/infrastructure barriers. Initial Hybrid Text Identification PoC failed (20s/scan, no segmentation). I optimized the algorithm (20s→2s), added word segmentation, getting my PoC selected. The solution fused OCR with DOM text extraction, overcoming complex styles/nested iframes. Achieved 100% accuracy on web text, boosting automation reliability in secure/offline environments.
 
-- **2023,2024 - UFT Cloud Browser**. 
+- **2023,2024 - UFT Cloud Browser**   
 Post-StormRunner Functional (SRF) sunset, demand for cloud-based browser automation remained high—yet budget/resource constraints required a lightweight solution. As Technical Lead, I architected a lean build with the Digital Lab team: leveraged existing infrastructure/UFT extensions, redesigned communication via WebSocket (replacing complex legacy pipelines), reimplemented features using browser APIs (cutting Windows-native dependencies), and led agile co-development (weekly syncs, daily code reviews).  
-Launched a fully functional UFT Cloud Browser in 4 months with just 4 developers—dramatically outperforming SRF’s 3-year, ~30-engineer effort—proving agility, architectural foresight, and delivery under pressure.
+Launched the beta version in just 4 months with a 4-developer team and finalized the full version in 2 releases—dramatically outperforming SRF’s 3-year, ~30-engineer effort—proving agility, architectural foresight, and delivery under pressure.
 
 - **2022 - UFT Web Agent MV3 Migration**  
-Led the architectural restructuring and MV3 version upgrade of the UFT Web Agent. Reconstructed the Web Extension compilation logic using Gulp, resolving core technical bottlenecks such as cross-domain frame communication and Content Security Policy (CSP). Innovatively designed an event simulation solution based on Chrome DevTools Protocol (CDP) and MAIN WORLD, addressing numerous common user issues. This reduced customer support tickets by 33%, significantly enhancing product stability and user experience.  
+Led the architectural restructuring and MV3 version upgrade of the UFT Web Agent. Reconstructed the Web Extension compilation logic using Gulp, resolving core technical bottlenecks such as cross-domain frame communication and Content Security Policy (CSP). Innovatively designed an event simulation solution based on Chrome DevTools Protocol (CDP) and MAIN WORLD, addressing numerous common user issues. Built a cross-scale algorithm to map screen coordinates to viewport coordinates—solving persistent UI inspection offset issues. This reduced customer support tickets by 33%, significantly enhancing product stability and user experience.  
 
 - **2020 - UFT Web Fast Mode**  
 Led the team in end-to-end restructuring of the UFT Web Add-in. Leveraging the execution characteristics of UFT test steps, the design merged multiple UFT Web Requests into a single UFT AutomationStep, drastically reducing I/O interaction frequency. Technically, non-intrusive modifications to the original code were implemented via a custom IDispatch invoke function, ultimately achieving a 300% improvement in execution performance.  
@@ -129,7 +126,36 @@ Joined a startup (xpfood.com) and led the end-to-end development of a CRM and PO
 
 ---
 
-##  🧩 Additional Information
+##  🧩 Products
+
+### 🤖 Gogogo - *2025.7-Now* 
+
+With 11 years of enterprise-level automated testing R&D experience, I independently developed Gogogo — a lightweight Web automation tool built on Web Extension technology. Designed specifically for Web Testing and RPA (Robotic Process Automation) scenarios, it addresses the core pain points of traditional automation tools: "heavy environment, high threshold, complicated operation" and significantly improves automation efficiency.  
+Key Features:  
+  1. Ultimate Lightweight: Zero Dependencies, Out-of-the-Box Use   
+  Eliminate the "environment configuration nightmare" of traditional tools. No complex deployment is required, enabling "use immediately after opening the browser":   
+  - Zero tool dependencies: No need to install Selenium, Playwright, Puppeteer or various drivers (chromedriver, edgedriver, etc.), saving tedious tool adaptation processes.
+  - Zero environment preparation: No requirement for runtime environments like JRE, Node.js or Python, avoiding environment version conflicts.
+  - Zero framework threshold: No need to build testing frameworks or RPA basic environments. Download the extension to start automation, allowing beginners to get started quickly.
+  2. Comprehensive Functionality: Professional-Grade Interfaces, Balancing Efficiency and Stability   
+  Centered on "meeting enterprise-level automation needs", it provides comprehensive and flexible function support:   
+  - Low learning curve: Compatible with some Playwright interfaces, enabling experienced users to adapt quickly and beginners to master easily.
+  - Full-scenario APIs: Cover end-to-end automated control of Browser, Window, Page, Frame, Element and Text.
+  - Dual operation modes: Support event and CDP Input simulation methods, balancing "execution performance" and "operational stability" to adapt to complex business scenarios.
+  3. Secure & Unburdened: Controllable Privacy, Zero System Intrusion   
+  Ensure user data and system security from the design source:   
+  - Zero data collection: No user operation data or private information is collected throughout the process, ensuring security and controllability.
+  - Sandboxed execution: The tool runs entirely in the browser's internal sandbox, with "zero intrusion and zero interference" to the local system environment, avoiding potential risks.
+  4. AI Assistance: Lower Threshold, Improve Efficiency   
+  Integrate AI capabilities to make automation no longer "exclusive to technicians":   
+  - Beginner-friendly: Equipped with element selection function, AI can assist in generating automation code, allowing users without programming background to quickly produce usable scripts.
+  - High flexibility: Support users to customize AI service configurations, enabling them to match business scenarios on demand and generate more demand-oriented code.
+
+  Try Now:   
+  Edge: https://microsoftedge.microsoft.com/addons/detail/gogogo/ilcdijkgbkkllhojpgbiajmnbdiadppj   
+  Chrome: https://chromewebstore.google.com/detail/gogogo/kpohfimcpcmbcihhpgnjcomihmcnfpna   
+
+  Gogogo: Break constraints with lightweight design, boost efficiency with professionalism, and make Web automation & RPA accessible to all.
 
 ### 📦 Unified Functional Testing (UFT/QTP) - *2014.7-2025.6*
 
